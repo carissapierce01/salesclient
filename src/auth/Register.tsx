@@ -31,7 +31,7 @@ export default class Signup extends React.Component<AcceptedProps, SigninInfo> {
 
   handleSubmit(e: FormEvent) {
     e.preventDefault();
-    fetch(`http://localhost:3002/user/signup`, {
+    fetch(`http://localhost:3001/user/signup`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -91,7 +91,7 @@ export default class Signup extends React.Component<AcceptedProps, SigninInfo> {
                   </fieldset>
                   <fieldset className="form-group">
                     <input
-                      type="text"
+                      type="email"
                       className="form-control form-control-lg"
                       placeholder="Email"
                       value={this.state.email}
@@ -113,7 +113,7 @@ export default class Signup extends React.Component<AcceptedProps, SigninInfo> {
                   </fieldset>
                   <fieldset className="form-group">
                     <input
-                      type="text"
+                      type="password"
                       className="form-control form-control-lg"
                       placeholder="Password"
                       value={this.state.password}

@@ -35,7 +35,7 @@ class Comment extends React.Component<AcceptedProps, ShopState> {
     };
   }
   fetchComments() {
-    fetch(`http://localhost:3002/comment/`, {
+    fetch(`http://localhost:3001/comment/`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -58,7 +58,7 @@ class Comment extends React.Component<AcceptedProps, ShopState> {
 
   handleSubmit(e: FormEvent) {
     e.preventDefault();
-    fetch(`http://localhost:3002/comment/shop`, {
+    fetch(`http://localhost:3001/comment/shop`, {
       method: "put",
       headers: {
         "content-type": "application/json",

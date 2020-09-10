@@ -13,6 +13,12 @@ import {
   CardText,
 } from "reactstrap";
 import { ShopType } from "../types/Types";
+import coffinshelf from "../assets/coffinshelf.jpg";
+import wreath from "../assets/skullwreath.jpg";
+import halloweeen from "../assets/halloweeen.jpg";
+import oliver from "../assets/namesign.jpg";
+import mirror from "../assets/vanitymirror.jpg";
+
 
 type AcceptedProps = {
   sessionToken: string;
@@ -36,7 +42,7 @@ class Shop extends React.Component<AcceptedProps, ShopState> {
     };
   }
   componentDidMount() {
-    fetch(`http://localhost:3002/shop/user`, {
+    fetch(`http://localhost:3001/shop/`, {
       method: "GET",
       headers: {
         "content-type": "application/json",
@@ -45,14 +51,14 @@ class Shop extends React.Component<AcceptedProps, ShopState> {
       },
     })
       .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
+      .then((res) => {
+        console.log(res);
         this.setState({
           shop: {
-            title: json[0].title,
-            image: json[0].image,
-            price: json[0].price,
-            description: json[0].description,
+            title: res[0].title,
+            image: res[0].image,
+            price: res[0].price,
+            description: res[0].description,
           },
         });
       });
@@ -65,21 +71,85 @@ class Shop extends React.Component<AcceptedProps, ShopState> {
             <div className="">
               <h2></h2>
               <Row>
-                <Col>
+                <Col sm="5.5">
                   <Card>
                     <CardImg
                       top
-                      width="286"
-                      height="180"
-                      src="{this.state.shop.title}"
+                      width="386"
+                      height="280"
+                      src={halloweeen}
                       alt="Your Post Needs An Image"
                     />
                     <CardBody>
-                      <CardTitle>{this.state.shop.title}</CardTitle>
-                      <CardSubtitle>{this.state.shop.price}</CardSubtitle>
-                      <CardText>{this.state.shop.description}</CardText>
-                      <Button>Buy</Button>
-                      <Button>comment - Modal</Button>
+                      <CardTitle><h2>{this.state.shop.title}</h2></CardTitle>
+                      <CardSubtitle><h4>{this.state.shop.price}</h4></CardSubtitle>
+                      <CardText><h4>{this.state.shop.description}</h4></CardText>
+                      <Button className="btn btn-lg btn-primary">Buy</Button>
+                      <Button className="btn btn-lg btn-primary">comment - Modal</Button>
+                    </CardBody>
+                  </Card>
+                  <Card>
+                    <CardImg
+                      top
+                      width="346"
+                      height="480"
+                      src={wreath}
+                      alt="Your Post Needs An Image"
+                    />
+                    <CardBody>
+                      <CardTitle><h2>Wreath</h2></CardTitle>
+                      <CardSubtitle><h4>$100</h4></CardSubtitle>
+                      <CardText><h4>Handmade</h4></CardText>
+                      <Button className="btn btn-lg btn-primary">Buy</Button>
+                      <Button className="btn btn-lg btn-primary">comment - Modal</Button>
+                    </CardBody>
+                  </Card>
+                  <Card>
+                    <CardImg
+                      top
+                      width="336"
+                      height="520"
+                      src={coffinshelf}
+                      alt="Your Post Needs An Image"
+                    />
+                    <CardBody>
+                      <CardTitle><h2>Coffin Shelf</h2></CardTitle>
+                      <CardSubtitle><h4>$200</h4></CardSubtitle>
+                      <CardText><h4>Made to order</h4></CardText>
+                      <Button className="btn btn-lg btn-primary">Buy</Button>
+                      <Button className="btn btn-lg btn-primary">comment - Modal</Button>
+                    </CardBody>
+                  </Card>
+                  <Card>
+                    <CardImg
+                      top
+                      width="386"
+                      height="280"
+                      src={oliver}
+                      alt="Your Post Needs An Image"
+                    />
+                    <CardBody>
+                      <CardTitle><h2>Name Sign</h2></CardTitle>
+                      <CardSubtitle><h4>$50</h4></CardSubtitle>
+                      <CardText><h4>Can be customized</h4></CardText>
+                      <Button className="btn btn-lg btn-primary">Buy</Button>
+                      <Button className="btn btn-lg btn-primary">comment - Modal</Button>
+                    </CardBody>
+                  </Card>
+                  <Card>
+                    <CardImg
+                      top
+                      width="386"
+                      height="480"
+                      src={mirror}
+                      alt="Your Post Needs An Image"
+                    />
+                    <CardBody>
+                      <CardTitle><h2>Vanity Mirror</h2></CardTitle>
+                      <CardSubtitle><h4>$300</h4></CardSubtitle>
+                      <CardText><h4>Can be customized</h4></CardText>
+                      <Button className="btn btn-lg btn-primary">Buy</Button>
+                      <Button className="btn btn-lg btn-primary">comment - Modal</Button>
                     </CardBody>
                   </Card>
                 </Col>

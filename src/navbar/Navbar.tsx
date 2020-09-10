@@ -12,7 +12,7 @@ export default class Navbar extends React.Component<AcceptedProps> {
       <nav className="navbar navbar-light">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            Saverr
+            Tales And Sales
           </Link>
           <ul className="nav navbar-nav pull-xs-right">
             <li className="nav-item">
@@ -20,7 +20,7 @@ export default class Navbar extends React.Component<AcceptedProps> {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink to="/login" className="nav-link">
                 Sign In
               </NavLink>
@@ -29,7 +29,7 @@ export default class Navbar extends React.Component<AcceptedProps> {
               <NavLink to="/register" className="nav-link">
                 Sign Up
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-item">
               <NavLink
                 to="/"

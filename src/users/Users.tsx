@@ -30,7 +30,7 @@ export default class UserData extends React.Component<
   }
 
   FetchUser() {
-    fetch(`http://localhost:3002/user/`, {
+    fetch(`http://localhost:3001/user/`, {
       method: "get",
       headers: {
         "content-type": "application/json",
@@ -53,7 +53,7 @@ export default class UserData extends React.Component<
   handleSubmit(e: FormEvent) {
     console.log(this.state.user, this.state.user);
     e.preventDefault();
-    fetch(`http://localhost:3002/users/update`, {
+    fetch(`http://localhost:3001/users/update`, {
       method: "put",
       headers: {
         "content-type": "application/json",
@@ -73,7 +73,7 @@ export default class UserData extends React.Component<
   }
 
   deleteUser() {
-    fetch(`http://localhost:3002/users/update`, {
+    fetch(`http://localhost:3001/users/update`, {
       method: "delete",
       headers: {
         "content-type": "application/json",

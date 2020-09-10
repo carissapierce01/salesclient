@@ -51,7 +51,36 @@ template {
 }
 
 a {
-  background-color: transparent
+  background-color: #957C8C;
+}
+
+nav {
+  background-color: #957C8C !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  margin-top: 10px;
+  margin-left: 10%;
+  margin-right: 30px;
+  font-size: 20px;
+  color: white;
+  line-height: 2;
+}
+
+.auth-page {
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: 6px;
+  margin-bottom: 65px;
+  border-radius: 50px;
+  width: 90%;
+  padding: 10px;
+  height: auto;
+  text-align: center;
+  background-color: #F9EEF4;
+  border: double 8px black;
 }
 
 a:active {
@@ -199,7 +228,6 @@ input[type=search]::-webkit-search-decoration {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: .35em .625em .75em
 }
 
 legend {
@@ -311,7 +339,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
-  background-color: #fff
+  background-image: url('./assets/pinkbrick.jpg');
 }
 
 [tabindex="-1"]:focus {
@@ -373,13 +401,13 @@ blockquote {
 }
 
 a {
-  color: #5cb85c;
+  color: #070607;
   text-decoration: none
 }
 
 a:focus,
 a:hover {
-  color: #3d8b3d;
+  color: #070607;
   text-decoration: underline
 }
 
@@ -689,6 +717,8 @@ mark,
   font-size: 90%;
   color: #818a91
 }
+
+
 
 code,
 kbd,
@@ -2548,29 +2578,29 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c
+  background-color: #DCD9DB;
+  border-color: #DCD9DB
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #449d44;
-  border-color: #419641
+  background-color: #fac8f2;
+  border-color: #DCD9DB
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #449d44;
-  border-color: #419641
+  background-color: #fac8f2;
+  border-color: #fac8f2
 }
 
 .btn-primary:active,
 .btn-primary.active,
 .open>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #449d44;
-  border-color: #419641;
+  background-color: #fac8f2;
+  border-color: #fac8f2;
   background-image: none
 }
 
@@ -6984,7 +7014,7 @@ ul.tag-list li {
   font-size: 1.5rem !important;
   padding-top: 0 !important;
   margin-right: 2rem !important;
-  color: #5cb85c !important
+  color: #fff !important
 }
 
 .nav-link .user-pic {
@@ -7335,8 +7365,6 @@ footer .attribution {
   margin: 1.5rem 0 -1px
 }
 
-.editor-page .tag-list i {
-  font-size: .6rem;
-  margin-right: 5px;
-  cursor: pointer
-}
+  
+
+  

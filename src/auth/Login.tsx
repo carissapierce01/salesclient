@@ -16,7 +16,7 @@ export default class Login extends React.Component<AcceptedProps, LoginInfo> {
   constructor(props: AcceptedProps) {
     super(props);
     this.state = {
-      pageTitle: "",
+      pageTitle: "Sign In",
       email: "",
       password: "",
     };
@@ -24,7 +24,7 @@ export default class Login extends React.Component<AcceptedProps, LoginInfo> {
 
   handleSubmit(e: FormEvent) {
     e.preventDefault();
-    fetch("http://localhost:3002/user/signin", {
+    fetch("http://localhost:3001/user/signin", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -55,7 +55,7 @@ export default class Login extends React.Component<AcceptedProps, LoginInfo> {
                 <fieldset>
                   <fieldset className="form-group">
                     <input
-                      type="text"
+                      type="email"
                       className="form-control form-control-lg"
                       placeholder="Username"
                       value={this.state.email}
@@ -66,7 +66,7 @@ export default class Login extends React.Component<AcceptedProps, LoginInfo> {
                   </fieldset>
                   <fieldset className="form-group">
                     <input
-                      type="text"
+                      type="password"
                       className="form-control form-control-lg"
                       placeholder="Password"
                       value={this.state.password}
